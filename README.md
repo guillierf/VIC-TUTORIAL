@@ -132,3 +132,150 @@ DRS and HA will be activated on the collapsed cluster.
 
 For the purpose of this blog, we are going to use option 3 as deployment example.
 
+
+
+# VIC – Installation and Consumption
+
+
+__Install VIC VM (by deploying VIC OVA)__
+
+ 
+
+Download VIC 1.2.1 from vmware.com (file should be named 'vic-v1.2.1-4104e5f9.ova')
+
+on vCenter, select the compute cluster → Actions → Deploy OVF Template:
+ ![](images/image5.png)
+ 
+Note: as you can see on this ESXi cluster, we have already deployed a VM named 'docker client photon OS'.
+
+The purposes of this VM are:
+
+* run the vic-machine utility
+* run docker commands against VCH
+
+ 
+
+Select Local file and click on Browse. Select the VIC OVA from the local directory.
+ ![](images/image6.png)
+ 
+ Click on Next.
+
+ 
+
+Rename the VIC VM if needed.
+ ![](images/image7.png)
+ 
+ Click on Next.
+
+ 
+
+Select the cluster where VIC VM will be installed.
+ ![](images/image8.png)
+ 
+ 
+ Click on Next.
+
+ 
+
+Review details.
+![](images/image9.png)
+
+Click on Next.
+
+ 
+
+Accept license agreements.
+![](images/image10.png)
+
+
+Click on Next.
+
+ 
+
+Select disk format and datastore.
+![](images/image11.png)
+
+Click on Next.
+
+ 
+
+Select networks Port-Group.
+![](images/image12.png)
+
+
+Click on Next.
+
+ 
+
+Enter root password.
+
+Specify VIC VM network attributes.
+![](images/image13.png)
+
+
+use default parameters for Registry configuration:
+![](images/image14.png)
+
+
+use default parameters for Management Portal configuration:
+![](images/image15.png)
+
+
+use default parameters for File Server configuration:
+![](images/image16.png)
+
+
+use default parameters for Demo VCH installer wizard configuration:
+![](images/image17.png)
+
+
+use default parameters for Example Users configuration:
+![](images/image18.png)
+
+
+Click on Next.
+
+ 
+
+Review all parameters:
+![](images/image19.png)
+
+
+Click on Finish to deploy VIC VM.
+
+ 
+
+ 
+
+At the end of the deployment, you should be able to see VIC VM in the Hosts and Cluster frame as shown below:
+![](images/image20.png)
+
+
+Power on the VM. The console window of the VM should display this output:
+![](images/image21.png)
+
+
+Open a web browser and go to the URL https://<VIC VM IP>:9443 (https://192.168.100.21:9443/ for this lab)
+
+ 
+
+The following window will appear. Fill the fields (vCenter information and credentials) as required.
+![](images/image22.png)
+
+
+Click on Continue.
+
+ 
+
+A message will appear with information about the installation:
+![](images/image23.png)
+
+
+Once completed, you should be able to see this window:
+![](images/image24.png)
+
+It confirms the installation of VIC is successful!
+
+
+
+
