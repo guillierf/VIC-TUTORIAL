@@ -73,7 +73,9 @@ __Environment Pre-Requisites__:
 
 DVS configuration used for this lab looks like this:
 
-![](images/image1.png)
+
+<img src="images/image1.png" width="100%">
+
 
 
 VM-RegionA01-vDS-COMP Port-Group will be used for public communication (to connect VCH to external world). This Port-Group hosts a DHCP server that will dynamically allocate IP address to VCH.
@@ -87,7 +89,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
 
  * __Option 1__
  
- ![](images/image2.png)
+<img src="images/image2.png" width="50%">
  
  2 types of cluster will be deployed:
 
@@ -102,7 +104,7 @@ DRS and HA will be activated on these clusters.
 
 * __Option 2__
 
- ![](images/image3.png)
+<img src="images/image3.png" width="50%">
  
  2 types of cluster will be deployed:
 
@@ -117,7 +119,7 @@ DRS and HA will be activated on these clusters.
 
 * __Option 3__
 
- ![](images/image4.png)
+<img src="images/image4.png" width="50%">
  1 type of cluster will be deployed:
 
     Collapsed Compute & Management Cluster:
