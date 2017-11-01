@@ -38,7 +38,7 @@ Multiple VCH Instances can be deployed in the same vSphere environment.
 
  
 
-___Product versions___:
+--Product versions---:
 
 * ESXi: 6.0 or 6.5 (6.5 recommended)
 * vCenter: 6.0 or 6.5 (6.5 recommended)
