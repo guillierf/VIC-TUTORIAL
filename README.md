@@ -24,7 +24,7 @@ Following aspects of the installation will be detailed in this tutorial:
 
  
 
-Terminology
+## Terminology
 
 
 VIC uses several terminologies which are important to understand from the beginning.
