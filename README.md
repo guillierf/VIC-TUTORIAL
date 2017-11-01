@@ -11,15 +11,10 @@ This blog covers VIC 1.2.1 Installation for lab or production environment.
 Following aspects of the installation will be detailed in this tutorial:
 
 * VIC – Product versions & Pre-Requisites
-
 * VIC - Deployment Options
-
 * VIC – Installation and Consumption
-
 * Install VIC VM (by deploying VIC OVA)
-
 * Provision a VCH Instance
-
 * Delete a VCH Instance
 
  
