@@ -89,7 +89,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
 
  * __Option 1__
  
-<img src="images/image2.png" width="50%">
+<img src="images/image2.png" width="80%">
  
  2 types of cluster will be deployed:
 
@@ -104,7 +104,7 @@ DRS and HA will be activated on these clusters.
 
 * __Option 2__
 
-<img src="images/image3.png" width="50%">
+<img src="images/image3.png" width="80%">
  
  2 types of cluster will be deployed:
 
@@ -119,7 +119,7 @@ DRS and HA will be activated on these clusters.
 
 * __Option 3__
 
-<img src="images/image4.png" width="50%">
+<img src="images/image4.png" width="80%">
  1 type of cluster will be deployed:
 
     Collapsed Compute & Management Cluster:
