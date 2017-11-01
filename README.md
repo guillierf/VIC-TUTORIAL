@@ -38,7 +38,7 @@ Multiple VCH Instances can be deployed in the same vSphere environment.
 
  
 
-Product versions:
+___Product versions___:
 
 * ESXi: 6.0 or 6.5 (6.5 recommended)
 * vCenter: 6.0 or 6.5 (6.5 recommended)
@@ -52,7 +52,7 @@ In term of storage, VIC can operate with any type of datastore: VMFS, shared sto
 
  
 
-__Environment Pre-Requisites__:
+___Environment Pre-Requisites___:
 
 * vSphere Enterprise Plus License
 * User with administrative credentials to vCenter
