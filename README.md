@@ -84,6 +84,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
 # VIC  Deployment Options
 
 
+
  * __Option 1__
  
  ![](images/image2.png)
@@ -96,6 +97,8 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
 DVS switch will be used as virtual networking component to switch C-VM (Container as VM) and VCH traffic.
 
 DRS and HA will be activated on these clusters.
+
+
 
 * __Option 2__
 
