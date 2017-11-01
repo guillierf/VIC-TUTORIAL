@@ -87,6 +87,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
  * __Option 1__
  
  ![](images/image2.png)
+ 
  2 types of cluster will be deployed:
 
     Management Cluster: hosts management plane components (like vCenter and VIC VM).
@@ -99,6 +100,7 @@ DRS and HA will be activated on these clusters.
 * __Option 2__
 
  ![](images/image3.png)
+ 
  2 types of cluster will be deployed:
 
     Management Cluster: hosts management plane components (like vCenter and VIC VM).
