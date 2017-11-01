@@ -82,4 +82,4 @@ Environment Pre-Requisites:
 
 DVS configuration used for this lab looks like this:
 image1.png
-![](image1.png)
+![](images/image1.png)
