@@ -38,7 +38,7 @@ Multiple VCH Instances can be deployed in the same vSphere environment.
 
  
 
---Product versions---:
+__Product versions__:
 
 * ESXi: 6.0 or 6.5 (6.5 recommended)
 * vCenter: 6.0 or 6.5 (6.5 recommended)
@@ -52,7 +52,7 @@ In term of storage, VIC can operate with any type of datastore: VMFS, shared sto
 
  
 
-___Environment Pre-Requisites___:
+__Environment Pre-Requisites__:
 
 * vSphere Enterprise Plus License
 * User with administrative credentials to vCenter
@@ -84,7 +84,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
 # VIC  Deployment Options
 
 
- * Option 1
+ * __Option 1__
  
  ![](images/image2.png)
  2 types of cluster will be deployed:
@@ -96,7 +96,7 @@ DVS switch will be used as virtual networking component to switch C-VM (Containe
 
 DRS and HA will be activated on these clusters.
 
-* Option 2
+* __Option 2__
 
  ![](images/image3.png)
  2 types of cluster will be deployed:
@@ -110,7 +110,7 @@ DRS and HA will be activated on these clusters.
 
 
 
-* Option 3
+* __Option 3__
 
  ![](images/image4.png)
  1 type of cluster will be deployed:
