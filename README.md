@@ -297,22 +297,6 @@ root@docker-client [ ~/DATA/VIC ]# pwd
 ```
 root@docker-client [ ~/DATA/VIC ]# wget https://192.168.100.21:9443/files/vic_1.2.1.tar.gz --no-check-certificate
 
---2017-10-30 19:53:29--  https://192.168.100.21:9443/files/vic_1.2.1.tar.gz
-Connecting to 192.168.100.21:9443... connected.
-WARNING: cannot verify 192.168.100.21's certificate, issued by 'CN=Self-signed by VMware\\, Inc.,OU=Containers on vSphere,O=VMware\\, Inc.,L=Palo Alto,ST=California,C=US':
-Unable to locally verify the issuer's authority.
-HTTP request sent, awaiting response... 200 OK
-Length: 247859076 (236M) [application/x-gzip]
-Saving to: 'vic_1.2.1.tar.gz'
-
-vic_1.2.1.tar.gz    100%[===================>] 236.38M  81.5MB/s    in 2.9s
-
-2017-10-30 19:53:32 (81.5 MB/s) - 'vic_1.2.1.tar.gz' saved [247859076/247859076]
-```
- 
-
- 
-```
 root@docker-client [ ~/DATA/VIC ]# ls
 vic_1.2.1.tar.gz
 ```
@@ -332,4 +316,48 @@ LICENSE        bootstrap.iso       vic-machine-linux        vic-ui-linux
 README         ui                  vic-machine-windows.exe  vic-ui-windows.exe
 appliance.iso  vic-machine-darwin  vic-ui-darwin
 ```
+ 
+
+__Update ESXi FW rules to allow VCH to communicate with ESXi hosts__:
+
+ 
+
+Issue this first command to retrieve vCenter thumbprint:
+
+```
+root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux update firewall --target vcsa-01a.corp.local --user administrator@vsphere.local --password VMware1! --compute-resource RegionA01-COMP01  --allow
+
+    Oct 30 2017 20:09:10.027Z INFO  ### Updating Firewall ####
+    Oct 30 2017 20:09:10.095Z ERROR Failed to verify certificate for target=vcsa-01a.corp.local (thumbprint=F7:68:F0:93:F4:EC:B7:FE:C1:02:3F:F3:AB:62:1A:50:E8:9A:0E:85)
+    Oct 30 2017 20:09:10.095Z ERROR Update cannot continue - failed to create validator: x509: certificate signed by unknown authority
+    Oct 30 2017 20:09:10.095Z ERROR --------------------
+    Oct 30 2017 20:09:10.095Z ERROR vic-machine-linux update firewall failed: update firewall failed
+```
+ 
+
+ 
+
+Re-issue the command now adding vCenter thumbprint:
+
+```
+root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux update firewall --target vcsa-01a.corp.local --user administrator@vsphere.local --password VMware1! --compute-resource RegionA01-COMP01  --allow --thumbprint F7:68:F0:93:F4:EC:B7:FE:C1:02:3F:F3:AB:62:1A:50:E8:9A:0E:85
+
+    Oct 30 2017 20:11:10.527Z INFO  ### Updating Firewall ####
+    Oct 30 2017 20:11:10.749Z INFO  Validating target
+    Oct 30 2017 20:11:10.749Z INFO  Validating compute resource
+    Oct 30 2017 20:11:10.776Z INFO
+    Oct 30 2017 20:11:10.777Z WARN  ### WARNING ###
+    Oct 30 2017 20:11:10.777Z WARN          This command modifies the host firewall on the target machine or cluster
+    Oct 30 2017 20:11:10.777Z WARN          The ruleset "vSPC" will be enabled
+    Oct 30 2017 20:11:10.777Z WARN          This allows all outbound TCP traffic from the target
+    Oct 30 2017 20:11:10.778Z WARN          To undo this modification use --deny
+    Oct 30 2017 20:11:10.778Z INFO
+    Oct 30 2017 20:11:10.930Z INFO  Ruleset "vSPC" enabled on host "HostSystem:host-29 @ /RegionA01/host/RegionA01-COMP01/esx-01a.corp.local"
+    Oct 30 2017 20:11:11.046Z INFO  Ruleset "vSPC" enabled on host "HostSystem:host-31 @ /RegionA01/host/RegionA01-COMP01/esx-02a.corp.local"
+    Oct 30 2017 20:11:11.170Z INFO  Ruleset "vSPC" enabled on host "HostSystem:host-32 @ /RegionA01/host/RegionA01-COMP01/esx-03a.corp.local"
+    Oct 30 2017 20:11:11.170Z INFO
+    Oct 30 2017 20:11:11.170Z INFO  Firewall changes complete
+    Oct 30 2017 20:11:11.171Z INFO  Command completed successfully
+```
+
  
