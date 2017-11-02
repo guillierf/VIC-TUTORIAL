@@ -135,7 +135,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
 # VIC – Installation and Consumption
 
 
-__Install VIC VM (by deploying VIC OVA)__
+## __Install VIC VM (by deploying VIC OVA)__
 
  
 
@@ -277,7 +277,7 @@ This confirms the installation of VIC is successful!
 
 
 
-__Download vic-machine utility__
+## __Download vic-machine utility__
 
  
 
@@ -318,7 +318,7 @@ appliance.iso  vic-machine-darwin  vic-ui-darwin
 ```
  
 
-__Update ESXi FW rules to allow VCH to communicate with ESXi hosts__:
+## __Update ESXi FW rules to allow VCH to communicate with ESXi hosts__:
 
  
 
@@ -361,7 +361,7 @@ root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux update firewall --tar
 ```
 
  
-__Provision a VCH Instance__:
+## __Provision a VCH Instance__:
 
  
 VCH characteristics: [information for this lab, replace it by yours]
@@ -448,7 +448,7 @@ Note that VCH VM has 2 network connections:
 * 1 for for inter containers communication - Using Bridge01-RegionA01-vDS-COMP port-group.
 
 
-__Use VCH as Docker endpoint__:
+## __Use VCH as Docker endpoint__:
 
  
 
@@ -505,7 +505,7 @@ root@docker-client [ ~/DATA/VIC/vic ]# docker --tls info
  
 
 
-__Delete a VCH Instance__:
+## __Delete a VCH Instance__:
 
  
 
