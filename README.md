@@ -17,7 +17,8 @@ Following aspects of the installation will be detailed in this tutorial:
 * Provision a VCH Instance
 * Delete a VCH Instance
 
- 
+---
+
 
 ## Terminology
 
@@ -32,7 +33,8 @@ VCH behaves as a Docker endpoint where developer can target their system to in o
 
 Multiple VCH Instances can be deployed in the same vSphere environment.
 
- 
+---
+
 
 ## VIC – Product versions & Pre-Requisites
 
@@ -84,6 +86,9 @@ This Port-Group hosts a DHCP server that will dynamically allocate IP address to
 Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
 
 
+---
+
+
 # VIC  Deployment Options
 
 
@@ -98,6 +103,7 @@ Compute Cluster: hosts compute workloads (especially VCH – Virtual Container H
 DVS switch will be used as virtual networking component to switch C-VM (Container as VM) and VCH traffic.
 
 DRS and HA will be activated on these clusters.
+
 
 
 
@@ -132,6 +138,8 @@ DRS and HA will be activated on the collapsed cluster.
 
 For the purpose of this blog, we are going to use option 3 as deployment example.
 
+
+---
 
 
 # VIC – Installation and Consumption
