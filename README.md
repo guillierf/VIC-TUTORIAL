@@ -201,34 +201,32 @@ Select networks Port-Group:
 Click on Next.
 
  
-Enter root password.
-
-Specify VIC VM network attributes:
+Enter root password. Then, specify VIC VM network attributes:
 
 <img src="images/image13.png" width="70%">
 
 
-use default parameters for Registry configuration:
+Customize if needed parameters for Registry configuration:
 
 <img src="images/image14.png" width="70%">
 
 
-use default parameters for Management Portal configuration:
+Customize if needed parameters for Management Portal configuration:
 
 <img src="images/image15.png" width="70%">
 
 
-use default parameters for File Server configuration:
+Customize if needed parameters for File Server configuration:
 
 <img src="images/image16.png" width="70%">
 
 
-use default parameters for Demo VCH installer wizard configuration:
+Customize if needed parameters for Demo VCH installer wizard configuration:
 
 <img src="images/image17.png" width="70%">
 
 
-use default parameters for Example Users configuration:
+Customize if needed parameters for Example Users configuration:
 
 <img src="images/image18.png" width="70%">
 
@@ -366,14 +364,14 @@ root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux update firewall --tar
  
 VCH characteristics: [information for this lab, replace it by yours]
 
-    target: vcsa-01a.corp.local
-    public-network: VM-RegionA01-vDS-COMP (DHCP server is connected on this network)
-    bridge-network: Bridge01-RegionA01-vDS-COMP
-    container-network: Bridge01-RegionA01-vDS-COMP
-    compute-resource: RegionA01-COMP01
-    image-store: RegionA01-ISCSI01-COMP01
-    volume-store: RegionA01-ISCSI01-COMP01
-    insecure-registry: 192.168.100.21 (IP for VIC VM)
+* target: vcsa-01a.corp.local
+* public-network: VM-RegionA01-vDS-COMP (DHCP server is connected on this network)
+* bridge-network: Bridge01-RegionA01-vDS-COMP
+* container-network: Bridge01-RegionA01-vDS-COMP
+* compute-resource: RegionA01-COMP01
+* image-store: RegionA01-ISCSI01-COMP01
+* volume-store: RegionA01-ISCSI01-COMP01
+* insecure-registry: 192.168.100.21 (IP of VIC VM)
 
 IP address for VCH VM will be dynamically allocated by DHCP server. If you want to statically assign IP address to VCH, use the additional options in the command below:
 
