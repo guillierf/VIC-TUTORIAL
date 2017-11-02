@@ -552,4 +552,4 @@ root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux delete --id vm-403 --
 
 on vCenter, Resource Pool and VCH VM instance should now be deleted:
 
-<img src="images/image26.png" width="100%">
+<img src="images/image26.png" width="80%">
