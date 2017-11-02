@@ -93,16 +93,16 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
 
 
 * __Option 1__
- <img src="images/image2.png" width="80%">
+<img src="images/image2.png" width="80%">
  
  2 types of cluster will be deployed:
 
-Management Cluster: hosts management plane components (like vCenter and VIC VM).
-Compute Cluster: hosts compute workloads (especially VCH – Virtual Container Host and Containers as VM).
+ Management Cluster: hosts management plane components (like vCenter and VIC VM).
+ Compute Cluster: hosts compute workloads (especially VCH – Virtual Container Host and Containers as VM).
 
-DVS switch will be used as virtual networking component to switch C-VM (Container as VM) and VCH traffic.
+ DVS switch will be used as virtual networking component to switch C-VM (Container as VM) and VCH traffic.
 
-DRS and HA will be activated on these clusters.
+ DRS and HA will be activated on these clusters.
 
 
 
@@ -112,12 +112,12 @@ DRS and HA will be activated on these clusters.
  
  2 types of cluster will be deployed:
 
-Management Cluster: hosts management plane components (like vCenter and VIC VM).
-Compute Cluster: hosts compute workloads (especially VCH – Virtual Container Host and Containers as VM).
+ Management Cluster: hosts management plane components (like vCenter and VIC VM).
+ Compute Cluster: hosts compute workloads (especially VCH – Virtual Container Host and Containers as VM).
 
-NSX will be used as virtual networking component to switch C-VM (Container as VM) and VCH traffic.
+ NSX will be used as virtual networking component to switch C-VM (Container as VM) and VCH traffic.
 
-DRS and HA will be activated on these clusters.
+ DRS and HA will be activated on these clusters.
 
 
 
@@ -127,16 +127,16 @@ DRS and HA will be activated on these clusters.
  
  1 type of cluster will be deployed:
 
-Collapsed Compute & Management Cluster:
-hosts management plane components (like vCenter and VIC VM).
-hosts compute workloads (especially VCH – Virtual Container Host and Containers as VM).
+ Collapsed Compute & Management Cluster:
+ hosts management plane components (like vCenter and VIC VM).
+ hosts compute workloads (especially VCH – Virtual Container Host and Containers as VM).
 
-DVS switch will be used as virtual networking component to switch C-VM (Container as VM) and VCH traffic.
+ DVS switch will be used as virtual networking component to switch C-VM (Container as VM) and VCH traffic.
 
-DRS and HA will be activated on the collapsed cluster.
+ DRS and HA will be activated on the collapsed cluster.
 
 
-For the purpose of this blog, we are going to use option 3 as deployment example.
+ For the purpose of this blog, we are going to use option 3 as deployment example.
 
 
 ---
