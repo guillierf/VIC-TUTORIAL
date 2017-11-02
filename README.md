@@ -317,45 +317,34 @@ vic_1.2.1.tar.gz
 ```
  
 
+```
 root@docker-client [ ~/DATA/VIC ]# gunzip vic_1.2.1.tar.gz
-
-
 root@docker-client [ ~/DATA/VIC ]# ls
-
 vic_1.2.1.tar
-
+```
  
 
- 
-
+```
 root@docker-client [ ~/DATA/VIC ]# tar xvf vic_1.2.1.tar
 
 vic/
-
 vic/README
-
 vic/vic-machine-darwin
-
 vic/appliance.iso
-
 <SNIP>
 
- 
+```
 
+```
 root@docker-client [ ~/DATA/VIC ]# ls
-
 vic  vic_1.2.1.tar
-
+```
  
-
+```
 root@docker-client [ ~/DATA/VIC ]# cd vic
-
 root@docker-client [ ~/DATA/VIC/vic ]# ls
-
 LICENSE        bootstrap.iso       vic-machine-linux        vic-ui-linux
-
 README         ui                  vic-machine-windows.exe  vic-ui-windows.exe
-
 appliance.iso  vic-machine-darwin  vic-ui-darwin
-
+```
  
