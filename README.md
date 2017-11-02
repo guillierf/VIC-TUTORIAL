@@ -92,7 +92,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
 # VIC  Deployment Options
 
 
-### * __Option 1:__
+* __Option 1__:
 <img src="images/image2.png" width="80%">
  
  2 types of cluster will be deployed:
@@ -105,7 +105,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
  DRS and HA will be activated on these clusters.
  
  
-### * __Option 2:__
+* __Option 2__:
 <img src="images/image3.png" width="80%">
  
  2 types of cluster will be deployed:
@@ -118,7 +118,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
  DRS and HA will be activated on these clusters.
  
  
- ### * __Option 3:__
+* __Option 3__:
  <img src="images/image4.png" width="80%">
  
  1 type of cluster will be deployed:
@@ -148,7 +148,7 @@ __Install VIC VM (by deploying VIC OVA)__
 Download VIC 1.2.1 from vmware.com (file should be named 'vic-v1.2.1-4104e5f9.ova')
 
 on vCenter, select the compute cluster → Actions → Deploy OVF Template:
- ![](images/image5.png)
+ <img src="images/image5.png" width="50%">
  
 Note: as you can see on this ESXi cluster, we have already deployed a VM named 'docker client photon OS'.
 
@@ -160,81 +160,73 @@ The purposes of this VM are:
  
 
 Select Local file and click on Browse. Select the VIC OVA from the local directory.
- ![](images/image6.png)
+<img src="images/image6.png" width="50%">
  
  Click on Next.
 
- 
 
 Rename the VIC VM if needed.
- ![](images/image7.png)
+<img src="images/image7.png" width="50%">
  
- Click on Next.
+Click on Next.
 
  
-
 Select the cluster where VIC VM will be installed.
- ![](images/image8.png)
+ <img src="images/image8.png" width="50%">
  
- 
- Click on Next.
+Click on Next.
 
  
-
 Review details.
-![](images/image9.png)
+<img src="images/image9.png" width="50%">
 
 Click on Next.
 
  
 
 Accept license agreements.
-![](images/image10.png)
-
+<img src="images/image10.png" width="50%">
 
 Click on Next.
 
  
-
 Select disk format and datastore.
-![](images/image11.png)
+<img src="images/image11.png" width="50%">
 
 Click on Next.
 
  
-
 Select networks Port-Group.
-![](images/image12.png)
+<img src="images/image12.png" width="50%">
 
 
 Click on Next.
 
  
-
 Enter root password.
 
 Specify VIC VM network attributes.
-![](images/image13.png)
+<img src="images/image13.png" width="50%">
 
 
 use default parameters for Registry configuration:
-![](images/image14.png)
+<img src="images/image14.png" width="50%">
 
 
 use default parameters for Management Portal configuration:
-![](images/image15.png)
+<img src="images/image15.png" width="50%">
 
 
 use default parameters for File Server configuration:
-![](images/image16.png)
+<img src="images/image16.png" width="50%">
 
 
 use default parameters for Demo VCH installer wizard configuration:
-![](images/image17.png)
+<img src="images/image17.png" width="50%">
 
 
 use default parameters for Example Users configuration:
-![](images/image18.png)
+<img src="images/image18.png" width="50%">
 
 
 Click on Next.
@@ -242,43 +234,37 @@ Click on Next.
  
 
 Review all parameters:
-![](images/image19.png)
+<img src="images/image19.png" width="50%">
 
 
 Click on Finish to deploy VIC VM.
 
  
-
- 
-
 At the end of the deployment, you should be able to see VIC VM in the Hosts and Cluster frame as shown below:
-![](images/image20.png)
+<img src="images/image20.png" width="50%">
 
 
 Power on the VM. The console window of the VM should display this output:
-![](images/image21.png)
+<img src="images/image21.png" width="50%">
 
 
 Open a web browser and go to the URL https://<VIC VM IP>:9443 (https://192.168.100.21:9443/ for this lab)
 
  
-
 The following window will appear. Fill the fields (vCenter information and credentials) as required.
-![](images/image22.png)
-
+<img src="images/image22.png" width="50%">
 
 Click on Continue.
 
  
-
 A message will appear with information about the installation:
-![](images/image23.png)
+<img src="images/image23.png" width="50%">
 
 
 Once completed, you should be able to see this window:
-![](images/image24.png)
+<img src="images/image24.png" width="50%">
 
-It confirms the installation of VIC is successful!
+This confirms the installation of VIC is successful!
 
 
 
