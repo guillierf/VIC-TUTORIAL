@@ -92,7 +92,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
 # VIC  Deployment Options
 
 
-* __Option 1:__
+### * __Option 1:__
 <img src="images/image2.png" width="80%">
  
  2 types of cluster will be deployed:
@@ -105,7 +105,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
  DRS and HA will be activated on these clusters.
  
  
-* __Option 2:__
+### * __Option 2:__
 <img src="images/image3.png" width="80%">
  
  2 types of cluster will be deployed:
@@ -118,7 +118,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
  DRS and HA will be activated on these clusters.
  
  
- * __Option 3:__
+ ### * __Option 3:__
  <img src="images/image4.png" width="80%">
  
  1 type of cluster will be deployed:
