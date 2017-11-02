@@ -441,3 +441,117 @@ root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux create --target vcsa-
 
 on vCenter, you should be able to see a new resource pool created and under this resource pool, the VCH VM instance:
 <img src="images/image25.png" width="100%">
+
+Note that VCH VM has 2 network connections:
+
+* 1 for for public communication (VCH to external world) - Using VM-RegionA01-vDS-COMP port-group.
+* 1 for for inter containers communication - Using Bridge01-RegionA01-vDS-COMP port-group.
+
+
+__Use VCH as Docker endpoint__:
+
+ 
+
+Retrieve the IP of VCH (192.168.100.180 here).
+
+ 
+Issue the following commands:
+
+ 
+```
+root@docker-client [ ~/DATA/VIC/vic ]# DOCKER_HOST=192.168.100.180
+root@docker-client [ ~/DATA/VIC/vic ]# export DOCKER_HOST
+```
+ 
+
+```
+root@docker-client [ ~/DATA/VIC/vic ]# docker --tls info
+
+    Containers: 0
+     Running: 0
+     Paused: 0
+     Stopped: 0
+    Images: 0
+    Server Version: v1.2.1-13858-c3db65f
+    Storage Driver: vSphere Integrated Containers v1.2.1-13858-c3db65f Backend Engine
+    VolumeStores: default
+    vSphere Integrated Containers v1.2.1-13858-c3db65f Backend Engine: RUNNING
+     VCH CPU limit: 9828 MHz
+     VCH memory limit: 5.643 GiB
+     VCH CPU usage: 3108 MHz
+     VCH memory usage: 5.103 GiB
+     VMware Product: VMware vCenter Server
+     VMware OS: linux-x64
+     VMware OS version: 6.5.0
+     Insecure Registries: 192.168.100.21
+     Registry Whitelist Mode: disabled.  All registry access allowed.
+    Plugins:
+     Volume: vsphere
+     Network: routable bridge
+    Swarm: inactive
+    Operating System: linux-x64
+    OSType: linux-x64
+    Architecture: x86_64
+    CPUs: 9828
+    Total Memory: 5.643 GiB
+    ID: vSphere Integrated Containers
+    Docker Root Dir:
+    Debug Mode (client): false
+    Debug Mode (server): false
+    Registry: registry.hub.docker.com
+    Experimental: false
+    Live Restore Enabled: false
+```
+ 
+
+
+__Delete a VCH Instance__:
+
+ 
+
+First list all VCH instances:
+
+
+```
+root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux ls --target vcsa-01a.corp.local --user administrator@vsphere.local --password VMware1! --thumbprint F7:68:F0:93:F4:EC:B7:FE:C1:02:3F:F3:AB:62:1A:50:E8:9A:0E:85
+
+    Oct 30 2017 20:33:39.297Z INFO  ### Listing VCHs ####
+    Oct 30 2017 20:33:39.488Z INFO  Validating target
+
+    ID            PATH                                              NAME                          VERSION                     UPGRADE STATUS
+    vm-403        /RegionA01/host/RegionA01-COMP01/Resources        virtual-container-host        v1.2.1-13858-c3db65f        Up to date
+```
+ 
+
+Then delete the VCH instance using the VM ID:
+
+```
+root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux delete --id vm-403 --target vcsa-01a.corp.local --user administrator@vsphere.local --password VMware1! --thumbprint F7:68:F0:93:F4:EC:B7:FE:C1:02:3F:F3:AB:62:1A:50:E8:9A:0E:85
+
+    Oct 30 2017 20:34:48.509Z INFO  ### Removing VCH ####
+    Oct 30 2017 20:34:48.686Z INFO  Validating target
+    Oct 30 2017 20:34:48.787Z INFO
+    Oct 30 2017 20:34:48.787Z INFO  VCH ID: VirtualMachine:vm-403
+    Oct 30 2017 20:34:48.807Z INFO  Removing VMs
+    Oct 30 2017 20:34:48.842Z INFO  Removing image stores
+    Oct 30 2017 20:34:50.157Z WARN  Since --force was not specified, the following volume stores will not be removed. Use the vSphere UI or supplied nfs targets to delete content you do not wish to keep.
+     vsphere volumestores:
+            default: [RegionA01-ISCSI01-COMP01] VIC
+
+     NFS volumestores:
+
+
+    Oct 30 2017 20:34:50.157Z INFO  Removing appliance VM network devices
+    Oct 30 2017 20:34:51.350Z INFO  Unregistered VM to cleanup after failed destroy: "VirtualMachine:vm-403"
+    Oct 30 2017 20:34:52.323Z INFO  Removing Resource Pool "virtual-container-host"
+    Oct 30 2017 20:34:52.365Z INFO  ----------
+    Oct 30 2017 20:34:52.366Z INFO  If firewall changes were made for VIC during install, they were not reverted during delete
+    Oct 30 2017 20:34:52.366Z INFO  To modify firewall rules see vic-machine update firewall --help
+    Oct 30 2017 20:34:52.366Z INFO  ----------
+    Oct 30 2017 20:34:52.367Z INFO  Completed successfully
+```
+ 
+
+on vCenter, Resource Pool and VCH VM instance should now be deleted:
+
+<img src="images/image26.png" width="100%">
