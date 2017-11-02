@@ -269,7 +269,7 @@ A message will appear with information about the installation:
 
 Once completed, you should be able to see this window:
 
-<img src="images/image24.png" width="100%">
+<img src="images/image24.png" width="80%">
 
 This confirms the installation of VIC is successful!
 
@@ -438,7 +438,7 @@ root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux create --target vcsa-
  ```
 
 on vCenter, you should be able to see a new resource pool created and under this resource pool, the VCH VM instance:
-<img src="images/image25.png" width="100%">
+<img src="images/image25.png" width="80%">
 
 Note that VCH VM has 2 network connections:
 
