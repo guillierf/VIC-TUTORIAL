@@ -1,4 +1,4 @@
-# VIC-TUTORIAL
+# Tutorial: VIC Installation
 
 
 
