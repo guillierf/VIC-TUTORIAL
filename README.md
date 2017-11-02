@@ -283,10 +283,10 @@ __Download vic-machine utility__
 
 On the VM dedicated to host the vic-machine utility (docker client photon OS VM in our case), create a directory for this purpose.
 
-Go into the directory and issue the following commands:
-
  
 ```
+root@docker-client [ ~/ ]# mkdir -p DATA/VIC
+root@docker-client [ ~/ ]# cd DATA/VIC
 root@docker-client [ ~/DATA/VIC ]# pwd
 /root/DATA/VIC
 ```
