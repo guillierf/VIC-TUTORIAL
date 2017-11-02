@@ -296,6 +296,7 @@ root@docker-client [ ~/DATA/VIC ]# pwd
 
 ```
 root@docker-client [ ~/DATA/VIC ]# wget https://192.168.100.21:9443/files/vic_1.2.1.tar.gz --no-check-certificate
+
 --2017-10-30 19:53:29--  https://192.168.100.21:9443/files/vic_1.2.1.tar.gz
 Connecting to 192.168.100.21:9443... connected.
 WARNING: cannot verify 192.168.100.21's certificate, issued by 'CN=Self-signed by VMware\\, Inc.,OU=Containers on vSphere,O=VMware\\, Inc.,L=Palo Alto,ST=California,C=US':
@@ -319,23 +320,7 @@ vic_1.2.1.tar.gz
 
 ```
 root@docker-client [ ~/DATA/VIC ]# gunzip vic_1.2.1.tar.gz
-root@docker-client [ ~/DATA/VIC ]# ls
-vic_1.2.1.tar
-```
- 
-
-```
 root@docker-client [ ~/DATA/VIC ]# tar xvf vic_1.2.1.tar
-
-vic/
-vic/README
-vic/vic-machine-darwin
-vic/appliance.iso
-<SNIP>
-
-```
-
-```
 root@docker-client [ ~/DATA/VIC ]# ls
 vic  vic_1.2.1.tar
 ```
