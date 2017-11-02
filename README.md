@@ -361,3 +361,83 @@ root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux update firewall --tar
 ```
 
  
+__Provision a VCH Instance__:
+
+ 
+VCH characteristics: [information for this lab, replace it by yours]
+
+    target: vcsa-01a.corp.local
+    public-network: VM-RegionA01-vDS-COMP (DHCP server is connected on this network)
+    bridge-network: Bridge01-RegionA01-vDS-COMP
+    container-network: Bridge01-RegionA01-vDS-COMP
+    compute-resource: RegionA01-COMP01
+    image-store: RegionA01-ISCSI01-COMP01
+    volume-store: RegionA01-ISCSI01-COMP01
+    insecure-registry: 192.168.100.21 (IP for VIC VM)
+
+IP address for VCH VM will be dynamically allocated by DHCP server. If you want to statically assign IP address to VCH, use the additional options in the command below:
+
+--public-network-ip 192.168.100.221/24 --public-network-gateway 192.168.100.1 --dns-server=192.168.110.10
+
+ 
+
+```
+root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux create --target vcsa-01a.corp.local --user administrator@vsphere.local --password VMware1! --public-network VM-RegionA01-vDS-COMP --bridge-network Bridge01-RegionA01-vDS-COMP --container-network VM-RegionA01-vDS-COMP:routable --container-network-firewall VM-RegionA01-vDS-COMP:open --compute-resource RegionA01-COMP01 --image-store RegionA01-ISCSI01-COMP01 --volume-store RegionA01-ISCSI01-COMP01:default --insecure-registry 192.168.100.21 --no-tlsverify --force
+
+    Oct 30 2017 20:18:46.466Z INFO  ### Installing VCH ####
+    Oct 30 2017 20:18:46.466Z WARN  Using administrative user for VCH operation - use --ops-user to improve security (see -x for advanced help)
+    Oct 30 2017 20:18:46.482Z INFO  Generating self-signed certificate/key pair - private key in virtual-container-host/server-key.pem
+    Oct 30 2017 20:18:46.598Z WARN  Configuring without TLS verify - certificate-based authentication disabled
+    Oct 30 2017 20:18:46.825Z INFO  Validating supplied configuration
+    Oct 30 2017 20:18:47.000Z INFO  vDS configuration OK on "Bridge01-RegionA01-vDS-COMP"
+    Oct 30 2017 20:18:47.016Z INFO  vDS configuration OK on "VM-RegionA01-vDS-COMP"
+    Oct 30 2017 20:18:47.102Z INFO  Firewall status: ENABLED on "/RegionA01/host/RegionA01-COMP01/esx-01a.corp.local"
+    Oct 30 2017 20:18:47.149Z INFO  Firewall status: ENABLED on "/RegionA01/host/RegionA01-COMP01/esx-02a.corp.local"
+    Oct 30 2017 20:18:47.195Z INFO  Firewall status: ENABLED on "/RegionA01/host/RegionA01-COMP01/esx-03a.corp.local"
+    Oct 30 2017 20:18:47.206Z INFO  Firewall configuration OK on hosts:
+    Oct 30 2017 20:18:47.206Z INFO          "/RegionA01/host/RegionA01-COMP01/esx-01a.corp.local"
+    Oct 30 2017 20:18:47.206Z INFO          "/RegionA01/host/RegionA01-COMP01/esx-02a.corp.local"
+    Oct 30 2017 20:18:47.207Z INFO          "/RegionA01/host/RegionA01-COMP01/esx-03a.corp.local"
+    Oct 30 2017 20:18:47.758Z INFO  License check OK on hosts:
+    Oct 30 2017 20:18:47.758Z INFO    "/RegionA01/host/RegionA01-COMP01/esx-01a.corp.local"
+    Oct 30 2017 20:18:47.758Z INFO    "/RegionA01/host/RegionA01-COMP01/esx-02a.corp.local"
+    Oct 30 2017 20:18:47.758Z INFO    "/RegionA01/host/RegionA01-COMP01/esx-03a.corp.local"
+    Oct 30 2017 20:18:47.769Z INFO  DRS check OK on:
+    Oct 30 2017 20:18:47.770Z INFO    "/RegionA01/host/RegionA01-COMP01"
+    Oct 30 2017 20:18:47.920Z INFO  Insecure registries = 192.168.100.21
+    Oct 30 2017 20:18:47.991Z INFO
+    Oct 30 2017 20:18:48.086Z INFO  Creating virtual app "virtual-container-host"
+    Oct 30 2017 20:18:48.132Z INFO  Creating appliance on target
+    Oct 30 2017 20:18:48.151Z INFO  Network role "client" is sharing NIC with "public"
+    Oct 30 2017 20:18:48.151Z INFO  Network role "management" is sharing NIC with "public"
+    Oct 30 2017 20:18:49.554Z INFO  Creating directory [RegionA01-ISCSI01-COMP01] VIC
+    Oct 30 2017 20:18:49.572Z INFO  Datastore path is [RegionA01-ISCSI01-COMP01] VIC
+    Oct 30 2017 20:18:50.236Z INFO  Uploading images for container
+    Oct 30 2017 20:18:50.236Z INFO          "appliance.iso"
+    Oct 30 2017 20:18:50.238Z INFO          "bootstrap.iso"
+    Oct 30 2017 20:19:01.789Z INFO  Waiting for IP information
+    Oct 30 2017 20:19:33.531Z INFO  Waiting for major appliance components to launch
+    Oct 30 2017 20:19:33.623Z INFO  Obtained IP address for client interface: "192.168.100.180"
+    Oct 30 2017 20:19:33.623Z INFO  Checking VCH connectivity with vSphere target
+    Oct 30 2017 20:19:34.124Z INFO  vSphere API Test: https://vcsa-01a.corp.local vSphere API target responds as expected
+    Oct 30 2017 20:19:39.371Z INFO  Initialization of appliance successful
+    Oct 30 2017 20:19:39.371Z INFO
+    Oct 30 2017 20:19:39.371Z INFO  VCH Admin Portal:
+    Oct 30 2017 20:19:39.371Z INFO  https://192.168.100.180:2378
+    Oct 30 2017 20:19:39.372Z INFO
+    Oct 30 2017 20:19:39.372Z INFO  Published ports can be reached at:
+    Oct 30 2017 20:19:39.372Z INFO  192.168.100.180
+    Oct 30 2017 20:19:39.372Z INFO
+    Oct 30 2017 20:19:39.373Z INFO  Docker environment variables:
+    Oct 30 2017 20:19:39.373Z INFO  DOCKER_HOST=192.168.100.180:2376
+    Oct 30 2017 20:19:39.395Z INFO
+    Oct 30 2017 20:19:39.396Z INFO  Environment saved in virtual-container-host/virtual-container-host.env
+    Oct 30 2017 20:19:39.396Z INFO
+    Oct 30 2017 20:19:39.396Z INFO  Connect to docker:
+    Oct 30 2017 20:19:39.397Z INFO  docker -H 192.168.100.180:2376 --tls info
+    Oct 30 2017 20:19:39.397Z INFO  Installer completed successfully
+
+ ```
+
+on vCenter, you should be able to see a new resource pool created and under this resource pool, the VCH VM instance:
+<img src="images/image25.png" width="100%">
