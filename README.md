@@ -277,4 +277,84 @@ This confirms the installation of VIC is successful!
 
 
 
+__Download vic-machine utility__
 
+ 
+
+On the VM dedicated to host the vic-machine utility (docker client photon OS VM in our case), create a directory for this purpose.
+
+Go into the directory and issue the following commands:
+
+ 
+
+    root@docker-client [ ~/DATA/VIC ]# pwd
+    /root/DATA/VIC
+
+ 
+
+
+    root@docker-client [ ~/DATA/VIC ]# wget https://192.168.100.21:9443/files/vic_1.2.1.tar.gz --no-check-certificate
+    --2017-10-30 19:53:29--  https://192.168.100.21:9443/files/vic_1.2.1.tar.gz
+    Connecting to 192.168.100.21:9443... connected.
+    WARNING: cannot verify 192.168.100.21's certificate, issued by 'CN=Self-signed by VMware\\, Inc.,OU=Containers on vSphere,O=VMware\\, Inc.,L=Palo Alto,ST=California,C=US':
+      Unable to locally verify the issuer's authority.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 247859076 (236M) [application/x-gzip]
+    Saving to: 'vic_1.2.1.tar.gz'
+
+    vic_1.2.1.tar.gz    100%[===================>] 236.38M  81.5MB/s    in 2.9s
+
+    2017-10-30 19:53:32 (81.5 MB/s) - 'vic_1.2.1.tar.gz' saved [247859076/247859076]
+
+ 
+
+ 
+
+    root@docker-client [ ~/DATA/VIC ]# ls
+    vic_1.2.1.tar.gz
+
+ 
+
+    root@docker-client [ ~/DATA/VIC ]# gunzip vic_1.2.1.tar.gz
+
+
+    root@docker-client [ ~/DATA/VIC ]# ls
+
+    vic_1.2.1.tar
+
+ 
+
+ 
+
+    root@docker-client [ ~/DATA/VIC ]# tar xvf vic_1.2.1.tar
+
+    vic/
+
+    vic/README
+
+    vic/vic-machine-darwin
+
+    vic/appliance.iso
+
+    <SNIP>
+
+ 
+
+    root@docker-client [ ~/DATA/VIC ]# ls
+
+    vic  vic_1.2.1.tar
+
+ 
+
+    root@docker-client [ ~/DATA/VIC ]# cd vic
+
+
+    root@docker-client [ ~/DATA/VIC/vic ]# ls
+
+    LICENSE        bootstrap.iso       vic-machine-linux        vic-ui-linux
+
+    README         ui                  vic-machine-windows.exe  vic-ui-windows.exe
+
+    appliance.iso  vic-machine-darwin  vic-ui-darwin
+
+ 
