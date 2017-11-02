@@ -154,24 +154,28 @@ The purposes of this VM are:
  
 
 Select Local file and click on Browse. Select the VIC OVA from the local directory.
-<img src="images/image6.png" width="50%">
+
+<img src="images/image6.png" width="70%">
  
- Click on Next.
+Click on Next.
 
 
 Rename the VIC VM if needed.
+
 <img src="images/image7.png" width="50%">
  
 Click on Next.
 
  
 Select the cluster where VIC VM will be installed.
- <img src="images/image8.png" width="50%">
+
+<img src="images/image8.png" width="50%">
  
 Click on Next.
 
  
 Review details.
+
 <img src="images/image9.png" width="50%">
 
 Click on Next.
@@ -179,18 +183,21 @@ Click on Next.
  
 
 Accept license agreements.
+
 <img src="images/image10.png" width="50%">
 
 Click on Next.
 
  
 Select disk format and datastore.
+
 <img src="images/image11.png" width="50%">
 
 Click on Next.
 
  
 Select networks Port-Group.
+
 <img src="images/image12.png" width="50%">
 
 
@@ -200,34 +207,40 @@ Click on Next.
 Enter root password.
 
 Specify VIC VM network attributes.
+
 <img src="images/image13.png" width="50%">
 
 
 use default parameters for Registry configuration:
+
 <img src="images/image14.png" width="50%">
 
 
 use default parameters for Management Portal configuration:
+
 <img src="images/image15.png" width="50%">
 
 
 use default parameters for File Server configuration:
+
 <img src="images/image16.png" width="50%">
 
 
 use default parameters for Demo VCH installer wizard configuration:
+
 <img src="images/image17.png" width="50%">
 
 
 use default parameters for Example Users configuration:
+
 <img src="images/image18.png" width="50%">
 
 
 Click on Next.
 
  
-
 Review all parameters:
+
 <img src="images/image19.png" width="50%">
 
 
@@ -235,10 +248,12 @@ Click on Finish to deploy VIC VM.
 
  
 At the end of the deployment, you should be able to see VIC VM in the Hosts and Cluster frame as shown below:
+
 <img src="images/image20.png" width="50%">
 
 
 Power on the VM. The console window of the VM should display this output:
+
 <img src="images/image21.png" width="50%">
 
 
@@ -246,16 +261,19 @@ Open a web browser and go to the URL https://<VIC VM IP>:9443 (https://192.168.1
 
  
 The following window will appear. Fill the fields (vCenter information and credentials) as required.
+
 <img src="images/image22.png" width="50%">
 
 Click on Continue.
 
  
 A message will appear with information about the installation:
+
 <img src="images/image23.png" width="50%">
 
 
 Once completed, you should be able to see this window:
+
 <img src="images/image24.png" width="50%">
 
 This confirms the installation of VIC is successful!
