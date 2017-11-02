@@ -146,11 +146,7 @@ on vCenter, select the compute cluster → Actions → Deploy OVF Template:
 <img src="images/image5.png" width="70%">
  
 Note: as you can see on this ESXi cluster, we have already deployed a VM named 'docker client photon OS'.
-
-The purposes of this VM are:
-
-* run the vic-machine utility
-* run docker commands against VCH
+This VM is intended to run the vic-machine utility and to run docker commands against VCH.
 
  
 
@@ -263,19 +259,19 @@ Open a web browser and go to the URL https://<VIC VM IP>:9443 (https://192.168.1
  
 The following window will appear. Fill the fields (vCenter information and credentials) as required:
 
-<img src="images/image22.png" width="70%">
+<img src="images/image22.png" width="30%">
 
 Click on Continue.
 
  
 A message will appear with information about the installation:
 
-<img src="images/image23.png" width="70%">
+<img src="images/image23.png" width="30%">
 
 
 Once completed, you should be able to see this window:
 
-<img src="images/image24.png" width="50%">
+<img src="images/image24.png" width="100%">
 
 This confirms the installation of VIC is successful!
 
