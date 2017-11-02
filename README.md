@@ -118,9 +118,8 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
  NSX will be used as virtual networking component to switch C-VM (Container as VM) and VCH traffic.
 
  DRS and HA will be activated on these clusters.
-
-
-
+ 
+ 
 
 * __Option 3__
 <img src="images/image4.png" width="80%">
