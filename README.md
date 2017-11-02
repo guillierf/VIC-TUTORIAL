@@ -438,6 +438,7 @@ root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux create --target vcsa-
  ```
 
 on vCenter, you should be able to see a new resource pool created and under this resource pool, the VCH VM instance:
+
 <img src="images/image25.png" width="80%">
 
 Note that VCH VM has 2 network connections:
