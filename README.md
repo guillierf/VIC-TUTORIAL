@@ -320,22 +320,17 @@ appliance.iso  vic-machine-darwin  vic-ui-darwin
 
  
 
-Issue this first command to retrieve vCenter thumbprint:
+Retrieve vCenter thumbprint:
 
 ```
-root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux update firewall --target vcsa-01a.corp.local --user administrator@vsphere.local --password VMware1! --compute-resource RegionA01-COMP01  --allow
-
-    Oct 30 2017 20:09:10.027Z INFO  ### Updating Firewall ####
-    Oct 30 2017 20:09:10.095Z ERROR Failed to verify certificate for target=vcsa-01a.corp.local (thumbprint=F7:68:F0:93:F4:EC:B7:FE:C1:02:3F:F3:AB:62:1A:50:E8:9A:0E:85)
-    Oct 30 2017 20:09:10.095Z ERROR Update cannot continue - failed to create validator: x509: certificate signed by unknown authority
-    Oct 30 2017 20:09:10.095Z ERROR --------------------
-    Oct 30 2017 20:09:10.095Z ERROR vic-machine-linux update firewall failed: update firewall failed
+ssh root@<vCenter Server>
+openssl x509 -in /etc/vmware-vpx/ssl/rui.crt -fingerprint -sha1 -noout
 ```
  
 
  
 
-Re-issue the command now adding vCenter thumbprint:
+Update ESXi FW rules to allow VCH to communicate with ESXi hosts:
 
 ```
 root@docker-client [ ~/DATA/VIC/vic ]# ./vic-machine-linux update firewall --target vcsa-01a.corp.local --user administrator@vsphere.local --password VMware1! --compute-resource RegionA01-COMP01  --allow --thumbprint F7:68:F0:93:F4:EC:B7:FE:C1:02:3F:F3:AB:62:1A:50:E8:9A:0E:85
