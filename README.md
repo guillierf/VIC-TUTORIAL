@@ -13,7 +13,7 @@ Following aspects of the installation will be detailed in this tutorial:
 * VIC – Product versions & Pre-Requisites
 * VIC - Deployment Options
 * VIC – Installation and Consumption
-* Install VIC VM (by deploying VIC OVA)
+* Install VIC appliance (by deploying VIC OVA)
 * Provision a VCH Instance
 * Delete a VCH Instance
 
@@ -25,9 +25,9 @@ Following aspects of the installation will be detailed in this tutorial:
 
 VIC uses several terminologies which are important to understand from the beginning.
 
-**VIC** (vSphere Integrated Container) will be deployed as a VM from an OVA.
-VIC VM will host essentials services like the Harbor private registry and Admiral container management.
-VIC VM will host also the vic-machine utility that enables administrators to deploy **VCH** (Virtual Container Hosts).
+**VIC appliance** (vSphere Integrated Container) will be deployed as a VM from an OVA.
+VIC appliance will host essentials services like the Harbor private registry and Admiral container management.
+VIC appliance will host also the vic-machine utility that enables administrators to deploy **VCH** (Virtual Container Hosts).
 VCH will be instantiated as a VM under an automatically created resource pool in the Compute cluster.
 VCH behaves as a Docker endpoint where developer can target their system to in order to run Containers as VM (C-VM) on the ESXi cluster, up to the limit imposed by the resource pool.
 
@@ -135,7 +135,7 @@ Bridge01-RegionA01-vDS-COMP will be used for inter containers communication.
 # VIC – Installation and Consumption
 
 
-## __Install VIC VM (by deploying VIC OVA)__
+## __Install VIC appliance (by deploying VIC OVA)__
 
  
 
