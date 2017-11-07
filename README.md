@@ -28,6 +28,7 @@ VIC uses several terminologies which are important to understand from the beginn
 **VIC appliance** (vSphere Integrated Container) will be deployed as a VM from an OVA.
 VIC appliance will host essentials services like the Harbor private registry and Admiral container management.
 VIC appliance will host also the vic-machine utility that enables administrators to deploy **VCH** (Virtual Container Hosts).
+
 VCH will be instantiated as a VM under an automatically created resource pool in the Compute cluster.
 VCH behaves as a Docker endpoint where developer can target their system to in order to run Containers as VM (C-VM) on the ESXi cluster, up to the limit imposed by the resource pool.
 
