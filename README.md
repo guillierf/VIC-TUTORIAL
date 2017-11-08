@@ -322,6 +322,8 @@ appliance.iso  vic-machine-darwin  vic-ui-darwin
  
 
 Retrieve vCenter thumbprint:
+(please refer to this link for more info: 
+https://vmware.github.io/vic-product/assets/files/html/1.2/vic_vsphere_admin/obtain_thumbprint.html)
 
 ```
 ssh root@<vCenter Server>
